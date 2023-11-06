@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>YouTube Sentiment Analysis</title>
+    <style>
+        h1 {
+            color: white;
+            font-family: Arial, sans-serif;
+            font-size: 40px;
+            text-align: center;
+        }
+        body {
+            background-color: black;
+            color: white;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            color: white;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            text-align: left;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid white;
+        }
+
+        th {
+            background-color: #333;
+            color: white;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            margin-right: 10px;
+            width: 70%;
+            font-size: 16px;
+        }
+
+        input[type="submit"] {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>YouTube Sentiment Analysis</h1>
+    
+        <form action="/" method="post" style="text-align: center;">
+            <input type="text" name="video_url" placeholder="Enter YouTube URL" required>
+            <input type="submit" value="Analyze">
+        </form>
+
+        {% if summary %}
+        <h2>Summary</h2>
+        <p>Total Comments: {{ summary['num_comments'] }}</p>
+        <p>Positive: {{ summary['positive'] }}</p>
+        <p>Negative: {{ summary['negative'] }}</p>
+        <p>Rating: {{ summary['rating'] }}%</p>
+
+        <h3>Comments</h3>
+        <table>
+            <tr>
+                <th>Comment</th>
+                <th>Sentiment</th>
+            </tr>
+            {% for comment, sentiment in comments %}
+            <tr>
+                <td>{{ comment }}</td>
+                <td>{{ sentiment }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        {% endif %}
+
+    </body>
+    </html>
