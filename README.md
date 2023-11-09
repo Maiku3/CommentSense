@@ -12,3 +12,5 @@ This project involves analyzing the sentiment expressed in comments on YouTube v
 First, to train a model, a dataset of text with sentiment labels is needed. I used this [dataset](https://www.kaggle.com/datasets/kazanova/sentiment140), Sentiment140 from Kaggle to train the model. It is a dataset of 1.6 million tweets labeled as positive, neutral, or negative. It would have been ideal if I could find a dataset of YouTube comments as that is what we are analyzing.
 
 ## To be Improved on
+- Making a more complex model to have the most accurate predictions.
+- Hosting the website on a server and improving the UI.
