@@ -6,7 +6,7 @@ import pickle
 
 VOCAB_SIZE = 10000
 MAX_LEN = 250
-MODEL_PATH = 'sentiment_analysis_model.h5'
+MODEL_PATH = 'sentiment_analysis_model.keras'
 
 # Load the saved model
 model = load_model(MODEL_PATH)
