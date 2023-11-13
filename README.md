@@ -5,12 +5,15 @@
 ![NumPy](https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white)
 ## Overview
 This project involves analyzing the sentiment expressed in comments on YouTube videos. The only sentiment indicator of the Youtube videos is the amount of likes as you can no longer view the amount of dislikes. Through the use of Machine Learning and Natural language processing, it is possible to analyze the sentiment of comments, which can provide more valuable insight into whether viewers like or dislike a video.
-## Screenshots
-![Screenshot 2023-11-13 120135](https://github.com/Maiku3/YT-Comment-Analysis/assets/95307563/32432cfa-351b-4d09-b9d7-7c1652a3f0fa)
+
 ## Design / Planning
 ![diagram](https://github.com/Maiku3/YT-Comment-Analysis/assets/95307563/2353fde5-c236-46d8-becc-67fc0f38e4d0)
+
+## Screenshots
+![Screenshot 2023-11-13 120135](https://github.com/Maiku3/YT-Comment-Analysis/assets/95307563/32432cfa-351b-4d09-b9d7-7c1652a3f0fa)
+
 ## Model / Results
-We got **80.25%** accuracy on the training set and **80.34%** accuracy on the validation set. The accuracy of the model is still **~80%** on the validation set, which means our model generalized pretty well from the training data and is not overfitting.
+We got **80.25%** accuracy on the training set and **80.34%** accuracy on the validation set. The accuracy of the model is still **~80%** on the validation set, showing that our model generalized pretty well from the training data and is not overfitting.
 ![Screenshot 2023-11-13 131806](https://github.com/Maiku3/YT-Comment-Analysis/assets/95307563/679fbfdc-8845-4607-b348-4c78ea27415a)
 
 ## Dataset
