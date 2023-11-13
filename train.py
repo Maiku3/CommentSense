@@ -21,7 +21,7 @@ df_shuffled = data.sample(frac=1).reset_index(drop=True)
 texts = []
 labels = []
 
-# Process the data from the csv file with text and label columns
+# Process the data from the csv file, to extract the text and label columns
 for _, row in df_shuffled.iterrows():
     texts.append(row[-1])
     label = row[0]
@@ -53,27 +53,28 @@ if os.path.exists(MODEL_PATH):
     model = tf.keras.models.load_model(MODEL_PATH)
 else:
     print("Training a new model...")
-    # Define the model to classify text into 3 categories (negative, neutral, positive)
+
+    # Create the model
     model = Sequential([
         Embedding(VOCAB_SIZE, EMBEDDING_DIM, input_length=MAX_LEN),
         Dropout(0.2),
         GlobalAveragePooling1D(),
         Dropout(0.2),
-        Dense(24, activation='relu'),
+        Dense(24, activation='relu'), # hidden layer
         BatchNormalization(),
         Dropout(0.2),
-        Dense(3, activation='softmax')
+        Dense(3, activation='softmax') # output layer (3 classes)
     ])
-    # Compile the model
+
+    # Compile and train the model
     model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics=['accuracy'])
 
-    # Train the model
     model.fit(x_train, y_train, epochs=10, batch_size=128, validation_split=0.2)
 
-    # Save the trained model
+    # Save the model
     model.save(MODEL_PATH)
 
-# Evaluate the model
+# Evaluate the model on the validation data set
 loss, accuracy = model.evaluate(x_val, y_val)
 print("Loss:", loss)
 print(f"Accuracy: {accuracy * 100:.2f}%")
