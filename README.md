@@ -1,4 +1,4 @@
-# YT-Comment-Analysis
+# CommentSense
 ![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)
 ![Keras](https://img.shields.io/badge/Keras-FF0000?style=for-the-badge&logo=keras&logoColor=white)
 ![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white)
@@ -12,8 +12,8 @@ This project involves analyzing the sentiment expressed in comments on YouTube v
 ## Screenshots
 ![Screenshot 2023-11-13 120135](https://github.com/Maiku3/YT-Comment-Analysis/assets/95307563/32432cfa-351b-4d09-b9d7-7c1652a3f0fa)
 
-## Model / Results
-We got **80.25%** accuracy on the training set and **80.34%** accuracy on the validation set. The accuracy of the model is still **~80%** on the validation set, showing that our model generalized pretty well from the training data and is not overfitting.
+## Model Accuracy
+We got **80.25%** accuracy on the training set and a **80.34%** accuracy on the validation set. The accuracy of the model is still **~80%** on the validation set, showing that our model generalized pretty well from the training data and is not overfitting.
 ![Screenshot 2023-11-13 131806](https://github.com/Maiku3/YT-Comment-Analysis/assets/95307563/679fbfdc-8845-4607-b348-4c78ea27415a)
 
 ## Dataset
