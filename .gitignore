@@ -1,2 +1,2 @@
-# api key
-app/.env
+# local env files
+.env*.local
